@@ -3,17 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#9333EA">
     <title>CABAÑAS - Beats & Productions</title>
-    <!-- Primero Bootstrap -->
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Dependencies -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Luego Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <!-- Finalmente nuestros estilos -->
+    <!-- Custom CSS -->
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Loader -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
@@ -40,23 +49,61 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero-section">
-        <div class="container h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12 text-center">
-                    <h1 class="graffiti-text">CABAÑAS PRODUCER</h1>
-                    <p class="graffiti-subtitle">Creando sonidos únicos</p>
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="hero-particles"></div>
+    <div class="container position-relative">
+        <div class="row min-vh-100 align-items-center justify-content-center">
+            <div class="col-lg-7 hero-content">
+                <div class="hero-text-container">
+                    <h2 class="hero-subtitle-top fade-up">Producer / Beat Maker</h2>
+                    <div class="glitch-wrapper">
+                        <h1 class="hero-title glitch" data-text="CABAÑAS">CABAÑAS</h1>
+                    </div>
+                    <div class="hero-description fade-up">
+                        <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+                    </div>
+                    <div class="hero-cta fade-up">
+                        <a href="#beats" class="btn btn-primary btn-lg">
+                            <span class="btn-content">
+                                <span class="btn-icon"><i class="fas fa-headphones-alt"></i></span>
+                                <span class="btn-text">Explorar Beats</span>
+                            </span>
+                        </a>
+                        <a href="#contact" class="btn btn-outline-gradient btn-lg">
+                            <span class="btn-content">
+                                <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                                <span class="btn-text">Contactar</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="hero-visual">
+                    <div class="rotating-disc">
+                        <div class="vinyl-img"></div>
+                        <div class="disc-reflection"></div>
+                    </div>
+                    <div class="equalizer">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+    <div class="hero-overlay"></div>
+</section>
 
     <!-- Beats Section -->
     <section id="beats" class="beats-section">
         <div class="container">
-            <h2 class="section-title">Mis Beats</h2>
-            <div class="row" id="beatsContainer">
+            <h2 class="section-title text-center fade-up">Últimos Beats</h2>
+            <div class="row g-4" id="beatsContainer">
                 <!-- Beat cards will be inserted here by JavaScript -->
             </div>
         </div>
@@ -66,28 +113,42 @@
     <section id="bio" class="bio-section">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6">
-                    <img src="/api/placeholder/500/500" alt="Producer Photo" class="img-fluid producer-image">
+                <div class="col-lg-6">
+                    <div class="bio-image fade-up">
+                        <img src="/api/placeholder/600/600" alt="Producer Photo" class="img-fluid">
+                        <div class="bio-image-overlay"></div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <h2 class="section-title">Biografía</h2>
-                    <p class="bio-text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae justo nec ante sollicitudin 
-                        vulputate. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-                        posuere cubilia Curae.
-                    </p>
-                    <div class="achievements">
-                        <div class="achievement-item">
-                            <span class="number">20+</span>
-                            <span class="text">Beats Producidos</span>
+                <div class="col-lg-6">
+                    <h2 class="section-title fade-up">Biografía</h2>
+                    <div class="bio-text fade-up">
+                        <p>Productor musical especializado en la creación de beats únicos y personalizados.
+                        Con una pasión por la innovación sonora y años de experiencia en la industria,
+                        cada producción es una obra maestra cuidadosamente diseñada para destacar.</p>
+                        <p>Fusionando elementos modernos con toques clásicos, creamos sonidos que definen
+                        la nueva era de la música urbana.</p>
+                    </div>
+                    <div class="achievement-grid">
+                        <div class="achievement-item fade-up">
+                            <div class="achievement-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="achievement-number">50+</div>
+                            <div class="achievement-label">Beats Producidos</div>
                         </div>
-                        <div class="achievement-item">
-                            <span class="number">5+</span>
-                            <span class="text">Artistas</span>
+                        <div class="achievement-item fade-up">
+                            <div class="achievement-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="achievement-number">20+</div>
+                            <div class="achievement-label">Artistas</div>
                         </div>
-                        <div class="achievement-item">
-                            <span class="number">2+</span>
-                            <span class="text">Años de Experiencia</span>
+                        <div class="achievement-item fade-up">
+                            <div class="achievement-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="achievement-number">5+</div>
+                            <div class="achievement-label">Años de Experiencia</div>
                         </div>
                     </div>
                 </div>
@@ -96,17 +157,32 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
+    <footer id="contact" class="footer">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-spotify"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-soundcloud"></i></a>
+                    <h2 class="section-title mb-5 fade-up">Conecta Conmigo</h2>
+                    <div class="social-grid">
+                        <a href="#" class="social-link" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="#" class="social-link" title="Spotify">
+                            <i class="fab fa-spotify"></i>
+                        </a>
+                        <a href="#" class="social-link" title="SoundCloud">
+                            <i class="fab fa-soundcloud"></i>
+                        </a>
                     </div>
-                    <p class="copyright">© 2024 Producer Name. Todos los derechos reservados.</p>
+                    <div class="contact-info fade-up">
+                        <p class="email">
+                            <i class="fas fa-envelope me-2"></i>
+                            contacto@cabanasproducer.com
+                        </p>
+                    </div>
+                    <p class="copyright">© 2024 Cabañas Producer. Todos los derechos reservados.</p>
                 </div>
             </div>
         </div>
