@@ -10,11 +10,7 @@
 }
 
 /* Reset y Estilos Base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     font-family: 'Space Grotesk', sans-serif;
